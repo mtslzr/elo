@@ -1,4 +1,4 @@
-module mtslzr/elo
+module github.com/mtslzr/elo
 
 go 1.12
 

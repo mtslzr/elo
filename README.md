@@ -2,7 +2,7 @@
 
 Elo is a Go-based Elo Ratings calculator.
 
-_Current Version: 0.1.0_
+_Current Version: 0.1.1_
 
 | Master | Develop |
 |:-:|:-:|
