@@ -1,0 +1,15 @@
+language: go
+
+go: 1.12.x
+
+install: true
+
+env:
+  - GO111MODULE=on GOFLAGS="--mod=vendor"
+
+before_script:
+  - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b ~/bin/ v1.16.0
+
+script:
+  - make lint
+  - make test
