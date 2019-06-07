@@ -11,5 +11,9 @@ before_script:
   - curl -sfL https://install.goreleaser.com/github.com/golangci/golangci-lint.sh | sh -s -- -b ~/bin/ v1.16.0
 
 script:
-  - make lint
-  - make test
+  - make
+
+notifications:
+  slack:
+    rooms:
+      secure: oL9W8Ekp2VLcSpeXwyZhJH+riKO8kkJb2F+8gUi1SPs4ucn0pKeI9Eud50RCrzep834KQaegFdZRznUEHav/OFSnjD2+/oEMgmoY3pJGkPaFaB4USrPgUF2vu080BUn013wYx9gLq9WFi0EFLA1abRTJZUXV6g+g2fEKXuqsnftimg1UJZRcr3dzzr+zvn28ZGlQM6F9QJ73RZlQxaL1cmN7cVBhxAKwOSc6TvNPnTTkKYV3gH32ptSfp2Gpu3sEiHO1J2icUpVPBKxUIcW1/AtJruZDdgfrVUEjnOdzF3VIz9Ab9fZitdFP+ndmgGa/7rHMvutxaIGfuuRLNyKNMAZ7Ttnun4D7xzAui9hWYBqUNC8WndSV9qYjrtF9+g4lwIO27xDwJOxYuxM+Aj9ukFBJi8r1lJWiNpp6jkXYD8p/DYPIMXpMHe4z70hs8JA/oq1vSdCffuXqrpdc5ILD1b7xjlpdiY7xVLQes/ynuptedHmjF/Cj6Y8H9fBB4cb/1PL105yOUsLHp4rCt36C1MIaQKgqnQqmmTd9erR/gpLM6xZO4yMus6qxLfPkDok6x0YfKMmCHvEW+Duo86d9zszjZKc9ZJndyjR36iiTPtVJ6oInsfGxK60pGEuxpGzDNXJfgDE/di0Im4f6J9unXHXf2CrxEnRtzvB+YCMNIDo=

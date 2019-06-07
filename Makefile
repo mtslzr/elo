@@ -11,18 +11,10 @@ all: lint test build
 build:
 	${GOBUILD} -o ${PACKAGE} -v
 
-db:
-	cat ${SQL} | ${DBCMD} ${DB}
-
 deps: tidy vend
-
-dump:
-	${DBCMD} ${DB} .dump > ${SQL}
 
 lint:
 	${GOLINT} run
-
-prep: deps dump
 
 test:
 	${GOTEST} -v ./...
