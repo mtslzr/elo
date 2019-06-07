@@ -30,12 +30,22 @@ newR = kF * (Result - winP)
 newRating := elo.NewRating(oldRating, winProbability, result)
 ```
 
+```go
+newRating := elo.NewRating(1500, 0.450, 1)
+// 1518
+```
+
 ### Calculate Win Probability
 
 Takes a team and opponent rating, and returns the win probability as a float64.
 
-winProb = 1 / 10^-((teamR - oppR)/400) + 1
+winProb = 1 / (10^-((teamR - oppR)/400) + 1)
 
 ```go
 winProb := elo.WinProbability(teamRating, opponentRating)
+```
+
+```go
+winProb := elo.WinProbability(1640, 1535)
+// 0.647 (or 64.7%)
 ```
